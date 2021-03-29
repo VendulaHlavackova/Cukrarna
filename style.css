@@ -1,0 +1,195 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/*
+	Poznámky:
+	- maximální šířka obsahu uvnitř sekcí je 1100px
+	- "pruh" s obsahem obsah je vycentrovaný na stránce
+	- všechny sekce mají nahoře a dole padding 80px
+	- kromě hlavičky a patičky, které mají jen 30px
+	- nadpisy jsou fontem Playfair Display, tučně
+	- veškerý další text na stránce fontem Lora
+	- výchozí velikost textu na stránce je 18px, řádkování 1.5
+
+	Velikosti nadpisů:
+	h1 - 52px  (nadpis v horní Hero sekci s cupcakem)
+	h2 - 36px  (nadpisy v dalších sekcích)
+	h3 - 18px  (název produktu v Dnešní nabídce)
+	Nadpisy mají řádkování jen 1.25
+
+	Barvy:
+	#f195b2		růžová - tlačítka a zvýraznění
+	#d2567d		tmavá růžová - hover/aktivní tlačítka
+	#3e606b		tmavá tyrkysová - na nadpisy
+	#242424		(skoro) černá - na běžný text
+	#f0f0f0		světle šedé pozadí prostřední sekce
+	#303339		tmavé pozadí patičky
+*/
+
+body {
+  font-size: 18px;
+  width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.hlavicka {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.logo {
+  width: 170px;
+  float: left;
+}
+
+.menu {
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #242424;
+  text-align: right;
+  padding: 10px 15px;
+}
+
+.menu a:hover {
+  background-color: #f195b2;
+  color: white;
+  border-radius: 20px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+.hero {
+  background-image: url(images/cupcake.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 1700px;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.obsah-sekce {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h1 {
+  font-size: 52px;
+  font-family: "Playfair Display", serif;
+  color: white;
+  margin: 0;
+}
+
+.hero-text {
+  font-size: 24px;
+  margin-top: 50px;
+  color: white;
+  font-style: italic;
+}
+
+.dva-sloupce {
+  display: flex;
+  flex-grow: inherit;
+}
+
+.nadpis-sekce {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  color: #3e606b;
+  font-family: "Playfair Display", serif;
+}
+
+.tlacitka {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.tlacitko {
+  background-color: #f195b2;
+  color: white;
+  border-radius: 30px;
+  padding: 15px 40px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tlacitko:hover {
+  background-color: #d2567d;
+}
+
+.sekce-seda {
+  background-color: #f0f0f0;
+  width: 1700px;
+}
+
+.nabidka {
+  display: flex;
+}
+
+.nabidka-text {
+  text-align: center;
+}
+
+.produkt {
+  align-items: center;
+
+  background-color: white;
+  margin: 30px;
+  border-radius: 5px;
+}
+
+.produkt-obsah {
+  padding: 20px;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.sloupec {
+  margin-left: 30px;
+}
+
+.foto {
+  border-radius: 5px;
+}
+
+.paticka {
+  width: 1700px;
+  height: 100px;
+  background-color: #303339;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 30px;
+  text-align: center;
+}
